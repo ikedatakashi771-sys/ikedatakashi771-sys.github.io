@@ -1,446 +1,3 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-
-<title>JVC Powered by Litheli｜暮らしをアップデートする次世代ポータブル電源</title>
-
-<meta name="description" content="普段使いも、防災も、アウトドアも。JVC Powered by Litheliの次世代ポータブル電源・モバイルバッテリーを紹介。日常と非常時をつなぐ、新しい電源体験。">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="icon" type="image/png" href="favicon.png.png">
-
-<style>
-
-*{
-box-sizing:border-box;
-}
-
-body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-background:#050914;
-color:#fff;
-line-height:1.9;
-overflow-x:hidden;
-}
-
-/* 背景演出 */
-
-.bg-light1{
-position:fixed;
-width:600px;
-height:600px;
-background:#008cff18;
-filter:blur(120px);
-top:-200px;
-left:-200px;
-z-index:-1;
-}
-
-.bg-light2{
-position:fixed;
-width:600px;
-height:600px;
-background:#00d0ff15;
-filter:blur(120px);
-bottom:-250px;
-right:-250px;
-z-index:-1;
-}
-
-.container{
-max-width:1250px;
-margin:auto;
-padding:0 24px;
-}
-
-/* HERO */
-
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:120px 20px;
-position:relative;
-}
-
-.hero-box{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(16px);
-padding:70px;
-border-radius:40px;
-box-shadow:
-0 0 0 1px rgba(255,255,255,0.03),
-0 30px 80px rgba(0,0,0,0.45);
-text-align:center;
-max-width:1000px;
-position:relative;
-overflow:hidden;
-}
-
-.hero-box::before{
-content:"";
-position:absolute;
-width:320px;
-height:320px;
-background:#00aaff18;
-border-radius:50%;
-top:-120px;
-right:-100px;
-filter:blur(40px);
-}
-
-.hero-box::after{
-content:"";
-position:absolute;
-width:260px;
-height:260px;
-background:#0084ff12;
-border-radius:50%;
-bottom:-100px;
-left:-80px;
-filter:blur(40px);
-}
-
-.hero-tag{
-display:inline-block;
-padding:10px 24px;
-border-radius:999px;
-background:rgba(0,153,255,0.15);
-border:1px solid rgba(0,170,255,0.3);
-color:#8fdcff;
-font-size:13px;
-font-weight:700;
-letter-spacing:2px;
-margin-bottom:35px;
-position:relative;
-z-index:2;
-}
-
-.hero-title{
-font-size:76px;
-line-height:1.08;
-margin:0 0 30px;
-font-weight:800;
-position:relative;
-z-index:2;
-}
-
-.gradient{
-background:linear-gradient(90deg,#00d2ff,#0084ff,#7cecff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.hero-desc{
-font-size:22px;
-color:#cfd8e6;
-max-width:760px;
-margin:auto;
-margin-bottom:45px;
-position:relative;
-z-index:2;
-}
-
-.cta{
-display:inline-block;
-padding:22px 70px;
-border-radius:999px;
-background:linear-gradient(90deg,#00c2ff,#0077ff);
-color:#fff;
-font-size:18px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:
-0 10px 30px rgba(0,153,255,0.25),
-0 0 30px rgba(0,170,255,0.18);
-transition:0.3s;
-position:relative;
-z-index:2;
-}
-
-.cta:hover{
-transform:translateY(-4px);
-box-shadow:
-0 20px 40px rgba(0,153,255,0.35),
-0 0 40px rgba(0,170,255,0.25);
-}
-
-/* SECTION */
-
-.section{
-padding:120px 20px;
-position:relative;
-}
-
-.section-title{
-font-size:46px;
-line-height:1.25;
-text-align:center;
-margin-bottom:20px;
-font-weight:800;
-}
-
-.line{
-width:130px;
-height:4px;
-margin:30px auto 40px;
-border-radius:999px;
-background:linear-gradient(90deg,#00d2ff,#0077ff);
-box-shadow:0 0 20px rgba(0,170,255,0.5);
-}
-
-.lead{
-max-width:950px;
-margin:auto;
-text-align:center;
-font-size:18px;
-color:#b7c4d8;
-}
-
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
-margin-top:60px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-padding:38px;
-border-radius:30px;
-backdrop-filter:blur(12px);
-box-shadow:
-0 10px 30px rgba(0,0,0,0.25),
-inset 0 1px 0 rgba(255,255,255,0.03);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-border-color:rgba(0,170,255,0.35);
-box-shadow:
-0 20px 40px rgba(0,0,0,0.35),
-0 0 25px rgba(0,170,255,0.08);
-}
-
-.card h3{
-margin-top:0;
-font-size:25px;
-margin-bottom:15px;
-}
-
-.card p{
-color:#c7d2e0;
-}
-
-/* IMAGE */
-
-.full-img{
-width:100%;
-display:block;
-border-radius:36px;
-margin:70px 0;
-box-shadow:
-0 30px 70px rgba(0,0,0,0.45),
-0 0 40px rgba(0,170,255,0.06);
-border:1px solid rgba(255,255,255,0.05);
-}
-
-/* POWER BOX */
-
-.power-box{
-margin-top:70px;
-padding:55px;
-border-radius:36px;
-background:
-linear-gradient(135deg,rgba(0,170,255,0.12),rgba(0,119,255,0.04)),
-rgba(255,255,255,0.04);
-
-border:1px solid rgba(0,170,255,0.2);
-
-box-shadow:
-0 0 50px rgba(0,170,255,0.08),
-inset 0 1px 0 rgba(255,255,255,0.04);
-}
-
-.power-title{
-font-size:38px;
-margin-top:0;
-margin-bottom:20px;
-}
-
-.power-box p{
-color:#d5deeb;
-}
-
-/* FLOAT */
-
-.float-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
-margin-top:40px;
-}
-
-.float-item{
-padding:24px;
-border-radius:22px;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.06);
-color:#dbe7f7;
-}
-
-/* COMPARE */
-
-.compare{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-margin-top:70px;
-}
-
-.compare-box{
-padding:40px;
-border-radius:32px;
-}
-
-.good{
-background:
-linear-gradient(135deg,rgba(0,170,255,0.12),rgba(0,90,255,0.05));
-border:1px solid rgba(0,170,255,0.25);
-}
-
-.normal{
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.list{
-display:grid;
-gap:18px;
-margin-top:30px;
-}
-
-.item{
-padding:18px 22px;
-border-radius:16px;
-background:rgba(255,255,255,0.04);
-}
-
-/* SEO */
-
-.seo{
-background:#0a1220;
-border-top:1px solid rgba(255,255,255,0.05);
-border-bottom:1px solid rgba(255,255,255,0.05);
-}
-
-.seo-text{
-max-width:1000px;
-margin:auto;
-color:#c8d5e7;
-font-size:17px;
-line-height:2.2;
-}
-
-/* FOOTER */
-
-.footer{
-padding:50px 20px;
-text-align:center;
-font-size:12px;
-color:#7d8796;
-}
-
-@media(max-width:768px){
-
-.hero{
-padding:100px 20px;
-min-height:auto;
-}
-
-.hero-box{
-padding:40px 25px;
-}
-
-.hero-title{
-font-size:46px;
-}
-
-.hero-desc{
-font-size:17px;
-}
-
-.section{
-padding:85px 20px;
-}
-
-.section-title{
-font-size:32px;
-}
-
-.compare{
-grid-template-columns:1fr;
-}
-
-.cta{
-width:100%;
-box-sizing:border-box;
-padding:18px 20px;
-}
-
-.power-box{
-padding:35px 25px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="bg-light1"></div>
-<div class="bg-light2"></div>
-
-<!-- HERO -->
-<section class="hero">
-
-<div class="hero-box">
-
-<div class="hero-tag">
-NEXT GENERATION POWER SYSTEM
-</div>
-
-<h1 class="hero-title">
-<span class="gradient">
-電源を、
-もっと自由に。
-</span>
-</h1>
-
-<p class="hero-desc">
-普段も使えて、災害時にも強い。<br>
-JVC Powered by Litheliが提案する、
-“暮らしに溶け込む”次世代ポータブル電源。
-</p>
-
-<a class="cta" href="#" target="_blank">
-▶ 公式サイトを見る
-</a>
-
-</div>
-
-</section>
-
 <!-- IMAGE1 -->
 <section class="section">
 
@@ -488,6 +45,33 @@ JVC Powered by Litheliは、
 室内利用も可能。
 ガソリン不要で扱いやすい設計。
 </p>
+</div>
+
+</div>
+
+<div class="float-grid" style="margin-top:60px;">
+
+<div class="float-item">
+<h3 style="margin-top:0;">✓ 普段使いしやすい</h3>
+毎日使えるから、
+いざという時も充電切れを防ぎやすい。
+</div>
+
+<div class="float-item">
+<h3 style="margin-top:0;">✓ インテリアにも馴染む</h3>
+無骨すぎないデザインで、
+室内にも自然に置きやすい。
+</div>
+
+<div class="float-item">
+<h3 style="margin-top:0;">✓ ガソリン不要</h3>
+燃料不要・排気ガスなし。
+室内利用にも適した次世代設計。
+</div>
+
+<div class="float-item">
+<h3 style="margin-top:0;">✓ 災害対策にも</h3>
+停電時の照明・通信・給電確保にも役立つ。
 </div>
 
 </div>
@@ -554,6 +138,50 @@ JVC Powered by Litheliは、
 
 </div>
 
+<div class="power-box">
+
+<h3 class="power-title">
+電源を「持ち歩く」時代へ
+</h3>
+
+<p>
+コンセントに縛られない自由。
+それが、ポータブル電源の最大の魅力です。
+
+リビング、
+ベランダ、
+キャンプ場、
+車内など、
+必要な場所へそのまま電源を持ち運べます。
+</p>
+
+<div class="grid" style="margin-top:40px;">
+
+<div class="card">
+<h3>在宅ワーク</h3>
+<p>
+停電時でもPC環境を維持。
+</p>
+</div>
+
+<div class="card">
+<h3>ベランダ利用</h3>
+<p>
+屋外家電や照明利用にも便利。
+</p>
+</div>
+
+<div class="card">
+<h3>レジャー</h3>
+<p>
+キャンプ・BBQでも快適な電源環境。
+</p>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
@@ -603,6 +231,66 @@ USB-C、
 <p>
 扇風機や炊飯器にも対応。
 </p>
+</div>
+
+</div>
+
+<div class="compare" style="margin-top:70px;">
+
+<div class="compare-box good">
+
+<h3>
+対応ポート
+</h3>
+
+<div class="list">
+
+<div class="item">
+ACコンセント
+</div>
+
+<div class="item">
+USB-A
+</div>
+
+<div class="item">
+USB-C
+</div>
+
+<div class="item">
+シガーソケット
+</div>
+
+</div>
+
+</div>
+
+<div class="compare-box normal">
+
+<h3>
+こんな機器に対応
+</h3>
+
+<div class="list">
+
+<div class="item">
+スマートフォン
+</div>
+
+<div class="item">
+ノートPC
+</div>
+
+<div class="item">
+LEDライト
+</div>
+
+<div class="item">
+小型家電
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -693,6 +381,44 @@ JVC Powered by Litheli
 
 </div>
 
+<div class="power-box">
+
+<h3 class="power-title">
+“もしも”を、
+もっと身近に。
+</h3>
+
+<p>
+災害対策は、
+「使わずに保管する」時代から、
+「普段使いしながら備える」時代へ。
+
+普段から使っているからこそ、
+非常時にも迷わず扱えます。
+</p>
+
+<div class="float-grid">
+
+<div class="float-item">
+停電時のスマホ充電
+</div>
+
+<div class="float-item">
+照明確保
+</div>
+
+<div class="float-item">
+通信環境維持
+</div>
+
+<div class="float-item">
+小型家電の利用
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
@@ -753,71 +479,61 @@ JVCブランドの安心感
 
 </section>
 
-<!-- SEO -->
-<section class="section seo">
+<section class="section">
 
 <div class="container">
 
 <h2 class="section-title">
-JVC Powered by Litheliとは？
+これからの時代に、
+“電源を持つ”という安心
 </h2>
 
 <div class="line"></div>
 
-<div class="seo-text">
+<p class="lead">
+自然災害、
+停電、
+アウトドア需要、
+在宅ワーク。
 
-JVC Powered by Litheliのポータブル電源は、
-「普段も使えて、災害時にも強い」をコンセプトに開発された次世代型ポータブル電源です。
+電源の重要性が高まる今、
+ポータブル電源は
+「一部の人向け」ではなく、
+暮らしのインフラへ変わり始めています。
+</p>
 
-一般的なポータブル電源は、
-停電や防災対策を目的として保管されるケースが多く、
-日常利用されないままになりがちです。
+<div class="grid">
 
-しかしJVC Powered by Litheliは、
-日常生活の中でも自然に活用できるよう設計されています。
-
-着脱式モバイルバッテリー「BH-U4」を搭載し、
-掃除機、高圧洗浄機、ランタン、マッサージ機など、
-対応家電とバッテリーを共有可能。
-
-さらに、
-ACコンセント、
-USB-A、
-USB-C、
-シガーソケットなど、
-多彩な出力端子を搭載し、
-ノートPC、
-スマートフォン、
-電気毛布、
-小型家電まで幅広く対応します。
-
-リン酸鉄リチウムイオンバッテリーによる高い安全性、
-ソーラーパネル対応、
-停電時自動切替機能など、
-防災性能にも優れていることから、
-車中泊、
-アウトドア、
-キャンプ、
-家庭用蓄電池用途まで、
-幅広く注目されています。
-
+<div class="card">
+<h3>防災対策</h3>
+<p>
+災害時の電力確保をサポート。
+</p>
 </div>
 
-<div style="text-align:center; margin-top:70px;">
+<div class="card">
+<h3>車中泊</h3>
+<p>
+移動中でも快適な電源環境。
+</p>
+</div>
 
-<a class="cta" href="#" target="_blank">
-▶ 公式サイトを見る
-</a>
+<div class="card">
+<h3>アウトドア</h3>
+<p>
+自然の中でも自由に電気を使える。
+</p>
+</div>
+
+<div class="card">
+<h3>日常利用</h3>
+<p>
+普段使いしながら備えられる。
+</p>
+</div>
 
 </div>
 
 </div>
 
 </section>
-
-<div class="footer">
-※本ページは広告を含みます
-</div>
-
-</body>
-</html>
