@@ -1,1 +1,828 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MIRABLE FINE MIST | AQUA VEIL ROOM</title>
+
+<meta name="description" content="水と光をテーマにした、新しいバスタイム美容体験。ミストシャワー・透明感・爽快感を意識したウォータービューティー特集。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:
+"Helvetica Neue",
+sans-serif;
+
+background:
+#edf9ff;
+
+color:#16435c;
+
+overflow-x:hidden;
+
+line-height:1.9;
+}
+
+/* 水彩背景 */
+
+.water-layer{
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(circle at 10% 20%, rgba(255,255,255,0.95), transparent 28%),
+radial-gradient(circle at 80% 10%, rgba(188,235,255,0.7), transparent 26%),
+radial-gradient(circle at 60% 80%, rgba(140,220,255,0.5), transparent 30%),
+linear-gradient(180deg,#f7fdff 0%,#dff5ff 100%);
+
+z-index:-30;
+}
+
+/* 波ライン */
+
+.wave-line{
+position:fixed;
+left:-10%;
+width:120%;
+height:240px;
+
+border-radius:50%;
+
+border:
+2px solid rgba(120,210,255,0.18);
+
+z-index:-20;
+}
+
+.wave1{
+top:-120px;
+transform:rotate(-4deg);
+}
+
+.wave2{
+top:240px;
+transform:rotate(2deg);
+}
+
+.wave3{
+bottom:-100px;
+transform:rotate(-3deg);
+}
+
+/* 上部 */
+
+.header{
+padding:
+26px 6vw;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:13px;
+letter-spacing:4px;
+font-weight:700;
+
+color:#2a7ba3;
+}
+
+.menu{
+font-size:11px;
+letter-spacing:3px;
+
+color:#67a8ca;
+}
+
+/* ヒーロー */
+
+.hero{
+padding:
+40px 6vw
+120px;
+}
+
+.hero-box{
+background:
+rgba(255,255,255,0.58);
+
+border:
+1px solid rgba(120,210,255,0.25);
+
+backdrop-filter:blur(10px);
+
+border-radius:44px;
+
+padding:80px;
+
+position:relative;
+
+overflow:hidden;
+}
+
+.hero-box::before{
+content:"";
+
+position:absolute;
+top:-140px;
+right:-120px;
+
+width:320px;
+height:320px;
+
+background:
+radial-gradient(circle,
+rgba(120,220,255,0.45),
+transparent 70%);
+
+border-radius:50%;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:
+1.1fr 0.9fr;
+
+gap:70px;
+
+align-items:center;
+}
+
+.label{
+display:inline-block;
+
+padding:
+10px 20px;
+
+background:
+rgba(122,219,255,0.18);
+
+border-radius:999px;
+
+font-size:11px;
+letter-spacing:3px;
+font-weight:700;
+
+color:#3a97c7;
+
+margin-bottom:34px;
+}
+
+.hero-title{
+font-size:7vw;
+line-height:0.88;
+
+font-weight:100;
+
+letter-spacing:-0.45vw;
+
+color:#205c7c;
+
+margin-bottom:38px;
+}
+
+.hero-title strong{
+font-weight:700;
+
+color:#53c9ff;
+}
+
+.hero-text{
+max-width:620px;
+
+font-size:18px;
+line-height:2.2;
+
+color:#54758b;
+
+margin-bottom:46px;
+}
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:16px;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:
+18px 38px;
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-size:12px;
+font-weight:700;
+letter-spacing:3px;
+
+transition:0.3s;
+}
+
+.cta.main{
+background:
+#53cbff;
+
+color:white;
+
+box-shadow:
+0 12px 28px rgba(83,203,255,0.28);
+}
+
+.cta.main:hover{
+transform:translateY(-4px);
+}
+
+.cta.sub{
+background:white;
+
+border:
+1px solid rgba(120,210,255,0.3);
+
+color:#4d86a6;
+}
+
+.hero-image{
+position:relative;
+}
+
+.hero-image img{
+width:100%;
+display:block;
+
+border-radius:34px;
+
+transform:
+rotate(-2deg);
+
+box-shadow:
+0 30px 60px rgba(70,160,210,0.18);
+}
+
+/* セクション */
+
+.section{
+padding:
+0 6vw
+120px;
+}
+
+.section-box{
+display:grid;
+grid-template-columns:
+0.9fr 1.1fr;
+
+gap:60px;
+
+align-items:center;
+
+margin-bottom:80px;
+}
+
+.section-box.reverse{
+grid-template-columns:
+1.1fr 0.9fr;
+}
+
+.section-box.reverse .text{
+order:2;
+}
+
+.section-box.reverse .image{
+order:1;
+}
+
+.image img{
+width:100%;
+display:block;
+
+border-radius:34px;
+
+box-shadow:
+0 25px 60px rgba(80,170,220,0.16);
+}
+
+.text{
+background:
+rgba(255,255,255,0.64);
+
+border:
+1px solid rgba(120,210,255,0.25);
+
+border-radius:34px;
+
+padding:54px;
+
+backdrop-filter:blur(10px);
+}
+
+.text h2{
+font-size:52px;
+line-height:0.95;
+
+font-weight:200;
+
+letter-spacing:-0.18vw;
+
+color:#236182;
+
+margin-bottom:28px;
+}
+
+.text p{
+font-size:16px;
+line-height:2.1;
+
+color:#58788d;
+
+margin-bottom:26px;
+}
+
+.mini{
+font-size:11px;
+letter-spacing:4px;
+font-weight:700;
+
+color:#62abd0;
+
+margin-bottom:20px;
+}
+
+/* 下部 */
+
+.bottom{
+padding:
+0 6vw
+120px;
+}
+
+.bottom-box{
+padding:90px;
+
+border-radius:46px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.8),
+rgba(218,244,255,0.8)
+);
+
+border:
+1px solid rgba(130,220,255,0.25);
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+}
+
+.bottom-box::before{
+content:"";
+
+position:absolute;
+left:-120px;
+bottom:-120px;
+
+width:320px;
+height:320px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,
+rgba(100,210,255,0.25),
+transparent 70%);
+}
+
+.bottom h3{
+font-size:6vw;
+line-height:0.9;
+
+font-weight:100;
+
+letter-spacing:-0.3vw;
+
+color:#205d7f;
+
+margin-bottom:32px;
+}
+
+.bottom p{
+max-width:820px;
+
+margin:auto;
+
+font-size:17px;
+line-height:2.2;
+
+color:#557489;
+
+margin-bottom:44px;
+}
+
+.footer{
+padding:40px 20px;
+
+text-align:center;
+
+font-size:11px;
+letter-spacing:4px;
+
+color:#74a0ba;
+}
+
+/* SP */
+
+@media(max-width:920px){
+
+.hero-grid,
+.section-box,
+.section-box.reverse{
+grid-template-columns:1fr;
+display:block;
+}
+
+.hero-title{
+font-size:68px;
+letter-spacing:-3px;
+}
+
+.text h2{
+font-size:44px;
+}
+
+.bottom h3{
+font-size:54px;
+letter-spacing:-2px;
+}
+
+.hero-box,
+.text,
+.bottom-box{
+padding:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="water-layer"></div>
+
+<div class="wave-line wave1"></div>
+<div class="wave-line wave2"></div>
+<div class="wave-line wave3"></div>
+
+<header class="header">
+
+<div class="logo">
+AQUA VEIL ROOM
+</div>
+
+<div class="menu">
+MIRABLE WATER STYLE
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<div class="hero-grid">
+
+<div>
+
+<div class="label">
+FINE WATER EXPERIENCE
+</div>
+
+<h1 class="hero-title">
+CLEAR<br>
+YOUR<br>
+<strong>TIME</strong>
+</h1>
+
+<p class="hero-text">
+毎日のシャワー時間を、
+もっと軽やかに、
+もっと爽快に。
+
+水に包まれる感覚を楽しむ、
+透明感あるホームバススタイルへ。
+
+美容、
+リラックス、
+空間演出。
+
+“浴びる時間”
+そのものを変えていく、
+新しいウォータービューティー体験です。
+</p>
+
+<div class="cta-wrap">
+
+<a class="cta main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL STORE
+
+</a>
+
+<a class="cta sub"
+href="page2.html">
+
+READ COLUMN
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<!-- image1.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image1.jpg.png"
+alt="">
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-box">
+
+<div class="image">
+
+<!-- image2.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image2.jpg.png"
+alt="">
+
+</a>
+
+</div>
+
+<div class="text">
+
+<div class="mini">
+WATER & LIGHT
+</div>
+
+<h2>
+Fresh<br>
+Mist<br>
+Flow
+</h2>
+
+<p>
+近年では、
+美容アイテムにおいても
+“透明感”
+や
+“爽快感”
+を重視する人が増えています。
+
+ただ使うだけではなく、
+空間そのものを心地よく整える。
+
+そんな新しいホームケア感覚が、
+注目されています。
+</p>
+
+<a class="cta main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+VIEW DETAIL
+
+</a>
+
+</div>
+
+</div>
+
+<div class="section-box reverse">
+
+<div class="text">
+
+<div class="mini">
+BATHROOM INTERIOR
+</div>
+
+<h2>
+Clean<br>
+Blue<br>
+Style
+</h2>
+
+<p>
+白と水色を基調にした、
+透明感あるバスルーム空間。
+
+清潔感、
+爽やかさ、
+軽やかさを意識したデザインが、
+日常のリラックスタイムを彩ります。
+</p>
+
+<a class="cta main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+CHECK STORE
+
+</a>
+
+</div>
+
+<div class="image">
+
+<!-- image3.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image3.jpg.png"
+alt="">
+
+</a>
+
+</div>
+
+</div>
+
+<div class="section-box">
+
+<div class="image">
+
+<!-- image4.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image4.jpg.png"
+alt="">
+
+</a>
+
+</div>
+
+<div class="text">
+
+<div class="mini">
+HOME BEAUTY TIME
+</div>
+
+<h2>
+Soft<br>
+Relax<br>
+Moment
+</h2>
+
+<p>
+毎日のルーティンを、
+より快適に、
+よりリフレッシュできる時間へ。
+
+水を楽しむ感覚そのものが、
+新しいホームビューティー習慣として
+広がっています。
+</p>
+
+<a class="cta main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+OFFICIAL SITE
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="bottom">
+
+<div class="bottom-box">
+
+<!-- image5.jpg.png -->
+
+<a href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+<img src="image5.jpg.png"
+style="
+width:100%;
+display:block;
+border-radius:36px;
+margin-bottom:50px;
+"
+alt="">
+
+</a>
+
+<h3>
+NEW<br>
+WATER<br>
+ROUTINE
+</h3>
+
+<p>
+シャワー時間を、
+もっと美しく、
+もっと軽やかに。
+
+透明感ある空間と、
+爽快感あるウォーターケア体験が、
+毎日の暮らしを変えていきます。
+</p>
+
+<div class="cta-wrap"
+style="
+justify-content:center;
+">
+
+<a class="cta main"
+href="ここにアフィリエイトリンク"
+target="_blank"
+rel="nofollow">
+
+SHOP NOW
+
+</a>
+
+<a class="cta sub"
+href="page2.html">
+
+NEXT PAGE
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+AQUA VEIL ROOM
+
+</footer>
+
+<img border="0"
+width="1"
+height="1"
+src="ここにA8計測gif"
+alt="">
+
+</body>
+</html>
