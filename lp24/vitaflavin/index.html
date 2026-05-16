@@ -1,1 +1,940 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>VITAFLAVIN｜次世代5-デアザフラビンサプリ｜未来型インナーケア</title>
+
+<meta name="description" content="NMNの次世代成分として注目される5-デアザフラビン配合。未来型エイジングケアサプリ『VITAFLAVIN』で、美容・活力・インナーケア習慣を。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+:root{
+--bg:#eef7ff;
+--bg2:#dff2ff;
+--text:#0d1b2a;
+--muted:#4f6275;
+--line:rgba(255,255,255,0.55);
+--glass:rgba(255,255,255,0.28);
+--blue:#5fd6ff;
+--cyan:#9af5ff;
+--white:#ffffff;
+--shadow:0 20px 80px rgba(83,180,255,0.18);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Hiragino Sans","Yu Gothic",sans-serif;
+background:
+radial-gradient(circle at top left,#ffffff 0%,#ebf8ff 20%,#d8f0ff 45%,#eff9ff 100%);
+color:var(--text);
+overflow-x:hidden;
+line-height:1.95;
+position:relative;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:900px;
+height:900px;
+background:radial-gradient(circle,#8be8ff 0%,transparent 70%);
+top:-300px;
+right:-250px;
+filter:blur(120px);
+opacity:0.45;
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:800px;
+height:800px;
+background:radial-gradient(circle,#ffffff 0%,transparent 70%);
+bottom:-250px;
+left:-200px;
+filter:blur(100px);
+opacity:0.7;
+z-index:-1;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:92%;
+max-width:1280px;
+margin:auto;
+position:relative;
+z-index:2;
+}
+
+.hero{
+padding:120px 0 100px;
+position:relative;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr 0.9fr;
+gap:60px;
+align-items:center;
+}
+
+.future-card{
+position:relative;
+background:rgba(255,255,255,0.18);
+border:1px solid rgba(255,255,255,0.6);
+backdrop-filter:blur(24px);
+padding:55px;
+border-radius:42px;
+overflow:hidden;
+box-shadow:var(--shadow);
+}
+
+.future-card::before{
+content:"";
+position:absolute;
+width:240px;
+height:240px;
+background:linear-gradient(135deg,#8ef0ff,#ffffff);
+border-radius:38% 62% 70% 30% / 30% 41% 59% 70%;
+top:-80px;
+right:-60px;
+opacity:0.55;
+filter:blur(20px);
+}
+
+.future-card::after{
+content:"";
+position:absolute;
+width:120px;
+height:120px;
+border:1px solid rgba(95,214,255,0.5);
+border-radius:50%;
+bottom:-30px;
+left:-30px;
+}
+
+.nano-label{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:10px 20px;
+border-radius:999px;
+background:rgba(255,255,255,0.5);
+backdrop-filter:blur(10px);
+font-size:13px;
+font-weight:bold;
+letter-spacing:2px;
+margin-bottom:28px;
+}
+
+.nano-dot{
+width:10px;
+height:10px;
+background:#62dcff;
+border-radius:50%;
+box-shadow:0 0 20px #62dcff;
+}
+
+.hero h1{
+font-size:74px;
+line-height:1.08;
+font-weight:800;
+letter-spacing:-2px;
+margin-bottom:30px;
+}
+
+.hero-gradient{
+background:linear-gradient(90deg,#49cfff,#84f3ff,#2e7cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:18px;
+color:var(--muted);
+margin-bottom:35px;
+}
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:16px;
+}
+
+.cta-btn{
+position:relative;
+padding:18px 34px;
+border-radius:999px;
+background:linear-gradient(135deg,#ffffff,#c7f4ff);
+font-weight:700;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.8);
+box-shadow:
+0 10px 30px rgba(95,214,255,0.2),
+inset 0 1px 0 rgba(255,255,255,0.8);
+transition:0.35s;
+}
+
+.cta-btn::before{
+content:"";
+position:absolute;
+width:180%;
+height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,0.8),transparent);
+top:0;
+left:-180%;
+transition:0.6s;
+}
+
+.cta-btn:hover::before{
+left:180%;
+}
+
+.cta-btn:hover{
+transform:translateY(-4px) scale(1.02);
+}
+
+.hero-image{
+position:relative;
+perspective:1200px;
+}
+
+.hero-image::before{
+content:"";
+position:absolute;
+inset:-20px;
+border-radius:40px;
+background:linear-gradient(135deg,#ffffff,#7ce8ff);
+filter:blur(40px);
+opacity:0.5;
+}
+
+.hero-image img{
+width:100%;
+border-radius:38px;
+position:relative;
+z-index:2;
+object-fit:contain;
+transform:rotateY(-7deg) rotateX(4deg);
+box-shadow:
+0 40px 100px rgba(95,214,255,0.22),
+0 10px 30px rgba(255,255,255,0.7);
+}
+
+section{
+padding:120px 0;
+position:relative;
+}
+
+.future-title{
+font-size:54px;
+line-height:1.2;
+margin-bottom:30px;
+font-weight:800;
+letter-spacing:-1px;
+position:relative;
+}
+
+.future-title::after{
+content:"";
+position:absolute;
+width:140px;
+height:6px;
+border-radius:999px;
+background:linear-gradient(90deg,#5fd6ff,#9af5ff);
+bottom:-18px;
+left:0;
+}
+
+.text{
+font-size:17px;
+color:var(--muted);
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.neo-panel{
+position:relative;
+padding:40px;
+background:rgba(255,255,255,0.22);
+border:1px solid rgba(255,255,255,0.6);
+border-radius:36px;
+overflow:hidden;
+backdrop-filter:blur(20px);
+box-shadow:var(--shadow);
+}
+
+.neo-panel::before{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:radial-gradient(circle,#9af5ff 0%,transparent 70%);
+top:-120px;
+right:-100px;
+opacity:0.45;
+}
+
+.neo-image{
+position:relative;
+}
+
+.neo-image::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+border:1px solid rgba(95,214,255,0.25);
+border-radius:36px;
+transform:translate(18px,18px);
+}
+
+.neo-image img{
+width:100%;
+border-radius:36px;
+position:relative;
+z-index:2;
+object-fit:contain;
+box-shadow:0 20px 70px rgba(95,214,255,0.18);
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.nano-card{
+position:relative;
+padding:38px;
+border-radius:34px;
+background:rgba(255,255,255,0.22);
+border:1px solid rgba(255,255,255,0.6);
+overflow:hidden;
+backdrop-filter:blur(20px);
+box-shadow:var(--shadow);
+transition:0.35s;
+}
+
+.nano-card:hover{
+transform:translateY(-10px);
+}
+
+.nano-card::before{
+content:"";
+position:absolute;
+width:180px;
+height:180px;
+background:radial-gradient(circle,#7eeaff 0%,transparent 70%);
+top:-80px;
+right:-80px;
+opacity:0.4;
+}
+
+.nano-icon{
+width:64px;
+height:64px;
+border-radius:24px;
+background:linear-gradient(135deg,#ffffff,#c4f4ff);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+margin-bottom:22px;
+box-shadow:0 10px 30px rgba(95,214,255,0.2);
+}
+
+.nano-card h3{
+font-size:24px;
+margin-bottom:16px;
+}
+
+.nano-card p{
+font-size:15px;
+color:var(--muted);
+}
+
+.cta-section{
+text-align:center;
+}
+
+.cta-box{
+position:relative;
+padding:80px 40px;
+border-radius:50px;
+background:rgba(255,255,255,0.24);
+border:1px solid rgba(255,255,255,0.7);
+overflow:hidden;
+backdrop-filter:blur(24px);
+box-shadow:var(--shadow);
+}
+
+.cta-box::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#8eefff 0%,transparent 70%);
+top:-250px;
+right:-180px;
+opacity:0.45;
+}
+
+.cta-box h2{
+font-size:58px;
+line-height:1.2;
+margin-bottom:28px;
+font-weight:800;
+}
+
+.faq{
+display:grid;
+gap:22px;
+margin-top:50px;
+}
+
+.faq-item{
+padding:34px;
+border-radius:28px;
+background:rgba(255,255,255,0.22);
+border:1px solid rgba(255,255,255,0.65);
+backdrop-filter:blur(18px);
+box-shadow:var(--shadow);
+}
+
+.faq-item h3{
+font-size:24px;
+margin-bottom:16px;
+}
+
+footer{
+padding:70px 0;
+text-align:center;
+font-size:14px;
+color:#69809b;
+}
+
+@media(max-width:980px){
+
+.hero-grid,
+.grid-2{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:52px;
+}
+
+.future-title{
+font-size:40px;
+}
+
+.cta-box h2{
+font-size:42px;
+}
+
+.future-card{
+padding:36px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div class="future-card">
+
+<div class="nano-label">
+<div class="nano-dot"></div>
+NEXT FUTURE INNER CARE
+</div>
+
+<h1>
+未来の美容習慣を、<br>
+<span class="hero-gradient">もっと先へ。</span>
+</h1>
+
+<p>
+NMNの次世代成分として注目される「5-デアザフラビン」を配合。  
+VITAFLAVINは、美容・活力・インナーケア習慣を内側から支える未来型エイジングケアサプリです。
+</p>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+公式サイトを見る
+</a>
+
+<a href="アフィリエイトリンク" class="cta-btn">
+美容習慣を始める
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<a href="アフィリエイトリンク">
+<img src="image1.jpg.png" alt="VITAFLAVIN">
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section>
+
+<div class="container">
+
+<div class="grid-2">
+
+<div class="neo-image">
+
+<a href="アフィリエイトリンク">
+<img src="image2.jpg.png" alt="5-デアザフラビン">
+</a>
+
+</div>
+
+<div class="neo-panel">
+
+<h2 class="future-title">
+5-デアザフラビンという<br>
+次世代インナーケア
+</h2>
+
+<div class="text">
+
+<p>
+美容・健康分野で大きな注目を集めてきたNMN。  
+その次世代素材として現在注目されているのが「5-デアザフラビン」です。
+</p>
+
+<p>
+エネルギー代謝や毎日のコンディション維持に着目した研究が進められており、美容習慣を大切にする世代から関心が高まっています。
+</p>
+
+<p>
+VITAFLAVINは、そんな5-デアザフラビンを高純度で配合。  
+さらに美容成分・インナーケア成分をバランス良く組み合わせることで、未来型エイジングケア習慣をサポートします。
+</p>
+
+</div>
+
+<div style="margin-top:35px;">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+口コミを見る
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="future-title">
+先端美容を支える<br>
+プレミアム設計
+</h2>
+
+<div class="card-grid">
+
+<div class="nano-card">
+
+<div class="nano-icon">✦</div>
+
+<h3>5-デアザフラビン</h3>
+
+<p>
+NMNに続く次世代成分として注目。毎日の美容習慣や活力維持を内側からサポート。
+</p>
+
+</div>
+
+<div class="nano-card">
+
+<div class="nano-icon">◉</div>
+
+<h3>PQQ配合</h3>
+
+<p>
+毎日のエネルギー習慣を支える人気成分を配合し、未来型インナーケアを実現。
+</p>
+
+</div>
+
+<div class="nano-card">
+
+<div class="nano-icon">✧</div>
+
+<h3>リポソームVC</h3>
+
+<p>
+美容習慣で人気のビタミンCを効率よく取り入れるための設計。
+</p>
+
+</div>
+
+<div class="nano-card">
+
+<div class="nano-icon">◎</div>
+
+<h3>高純度設計</h3>
+
+<p>
+厳格な品質管理を行う国内GMP認定工場で製造されています。
+</p>
+
+</div>
+
+<div class="nano-card">
+
+<div class="nano-icon">✺</div>
+
+<h3>美容成分配合</h3>
+
+<p>
+グルタチオン酵母、ホワイトトマトなど美容成分を贅沢配合。
+</p>
+
+</div>
+
+<div class="nano-card">
+
+<div class="nano-icon">◈</div>
+
+<h3>毎日続けやすい</h3>
+
+<p>
+1日1粒目安。忙しい毎日でも取り入れやすい未来型美容習慣。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="grid-2">
+
+<div class="neo-panel">
+
+<h2 class="future-title">
+年齢を重ねるほど、<br>
+内側ケアが重要に
+</h2>
+
+<div class="text">
+
+<p>
+30代後半頃から、「疲れが抜けにくい」「朝がつらい」「美容ケアだけでは物足りない」と感じ始める方は少なくありません。
+</p>
+
+<p>
+近年では、スキンケアだけではなく“インナーケア”を重視する美容習慣が急速に広がっています。
+</p>
+
+<p>
+VITAFLAVINは、美容意識の高い方に向けて開発された未来型サプリメント。  
+毎日のコンディション維持、美容習慣、活力ある日々をサポートする設計となっています。
+</p>
+
+<p>
+高級美容クリニックや美容サロンでも注目される次世代インナーケア成分を、自宅で手軽に取り入れられるのが魅力です。
+</p>
+
+</div>
+
+<div style="margin-top:35px;">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+公式サイトはこちら
+</a>
+
+</div>
+
+</div>
+
+<div class="neo-image">
+
+<a href="アフィリエイトリンク">
+<img src="image3.jpg.png" alt="未来美容">
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="grid-2">
+
+<div class="neo-image">
+
+<a href="アフィリエイトリンク">
+<img src="image4.jpg.png" alt="美容サプリ">
+</a>
+
+</div>
+
+<div class="neo-panel">
+
+<h2 class="future-title">
+未来の美容は、<br>
+「内側」から整える
+</h2>
+
+<div class="text">
+
+<p>
+エイジングケアは、毎日の積み重ねによって未来が変わっていきます。
+</p>
+
+<p>
+食事、睡眠、運動、そしてインナーケア。  
+そのすべてをバランスよく整えることが、美容習慣において重要視されています。
+</p>
+
+<p>
+VITAFLAVINは、次世代インナーケアとして注目される5-デアザフラビンを中心に、美容・活力・毎日のコンディション維持を支える設計。
+</p>
+
+<p>
+「いつまでも若々しくいたい」「年齢に負けない美容習慣を始めたい」そんな想いを支える未来型サプリメントです。
+</p>
+
+</div>
+
+<div style="margin-top:35px;">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+美容習慣を始める
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="future-title">
+こんな方におすすめ
+</h2>
+
+<div class="card-grid">
+
+<div class="nano-card">
+
+<div class="nano-icon">◌</div>
+
+<h3>美容意識が高い方</h3>
+
+<p>
+内側からの美容習慣を取り入れたい方に。
+</p>
+
+</div>
+
+<div class="nano-card">
+
+<div class="nano-icon">✦</div>
+
+<h3>年齢サインが気になる方</h3>
+
+<p>
+ハリ・ツヤ・毎日のコンディション維持を意識する世代へ。
+</p>
+
+</div>
+
+<div class="nano-card">
+
+<div class="nano-icon">◎</div>
+
+<h3>活力を維持したい方</h3>
+
+<p>
+仕事・家事・趣味を前向きに楽しみたい方に。
+</p>
+
+</div>
+
+<div class="nano-card">
+
+<div class="nano-icon">✧</div>
+
+<h3>高級美容サプリを探している方</h3>
+
+<p>
+品質や成分設計にこだわりたい方に選ばれています。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta-section">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+未来の自分へ、<br>
+<span class="hero-gradient">新しい美容習慣を。</span>
+</h2>
+
+<p style="font-size:18px;color:#567089;margin-bottom:40px;">
+次世代成分「5-デアザフラビン」を取り入れた未来型インナーケア。
+</p>
+
+<div class="cta-wrap" style="justify-content:center;">
+
+<a href="アフィリエイトリンク" class="cta-btn">
+公式サイトを見る
+</a>
+
+<a href="アフィリエイトリンク" class="cta-btn">
+定期コースを確認する
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="future-title">
+よくある質問
+</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<h3>どんな方におすすめですか？</h3>
+
+<p>
+美容習慣を大切にしたい方、年齢に応じたインナーケアを始めたい方、毎日の活力を意識する方におすすめです。
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>毎日続けやすいですか？</h3>
+
+<p>
+1日1粒目安の小粒カプセル設計のため、忙しい方でも取り入れやすくなっています。
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>日本国内で製造されていますか？</h3>
+
+<p>
+国内GMP認定工場で品質管理のもと製造されています。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+© VITAFLAVIN Future Beauty Care
+</p>
+
+</div>
+
+</footer>
+
+<img border="0"
+width="1"
+height="1"
+src="https://www16.a8.net/0.gif?a8mat=4B3RV3+5CBM0A+4ZUQ+HV7V6"
+alt="">
+
+</body>
+</html>
