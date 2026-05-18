@@ -1,1 +1,895 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ミニョン スカルプヘアミスト｜頭皮のニオイ対策に新感覚ヘアフレグランス</title>
+
+<meta name="description" content="女性の頭皮臭・夕方の髪のニオイ対策に。新感覚の頭皮フレグランス『ミニョン スカルプヘアミスト』。韓国コスメ風の透明感デザインと香りケアで清潔感ある美髪習慣へ。">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:"Hiragino Sans","Yu Gothic",sans-serif;
+background:
+radial-gradient(circle at top left,#ffffff 0%,#f8f6ff 28%,#eef4ff 58%,#ffffff 100%);
+color:#514a69;
+overflow-x:hidden;
+line-height:2;
+position:relative;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+border-radius:50%;
+background:radial-gradient(circle,#d8c7ff 0%,transparent 70%);
+top:-250px;
+left:-220px;
+opacity:0.35;
+filter:blur(90px);
+z-index:-3;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+border-radius:50%;
+background:radial-gradient(circle,#c9f0ff 0%,transparent 70%);
+bottom:-280px;
+right:-220px;
+opacity:0.3;
+filter:blur(100px);
+z-index:-3;
+}
+
+.fog{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,255,255,0.7),transparent 25%),
+radial-gradient(circle at 80% 40%,rgba(255,255,255,0.5),transparent 22%),
+radial-gradient(circle at 60% 80%,rgba(255,255,255,0.5),transparent 25%);
+backdrop-filter:blur(80px);
+z-index:-2;
+pointer-events:none;
+}
+
+.container{
+width:92%;
+max-width:1320px;
+margin:auto;
+position:relative;
+z-index:2;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px 0;
+position:relative;
+overflow:hidden;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.05fr 0.95fr;
+gap:70px;
+align-items:center;
+}
+
+.glass-card{
+position:relative;
+padding:70px;
+border-radius:48px;
+background:rgba(255,255,255,0.22);
+border:1px solid rgba(255,255,255,0.5);
+box-shadow:
+0 25px 80px rgba(185,195,255,0.18),
+inset 0 1px 1px rgba(255,255,255,0.8);
+backdrop-filter:blur(28px);
+overflow:hidden;
+}
+
+.glass-card::before{
+content:"";
+position:absolute;
+width:280px;
+height:280px;
+border-radius:50%;
+background:radial-gradient(circle,#ffffff 0%,transparent 70%);
+top:-100px;
+right:-100px;
+opacity:0.6;
+}
+
+.glass-card::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(135deg,rgba(255,255,255,0.18),transparent 45%);
+pointer-events:none;
+}
+
+.label{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:12px 24px;
+border-radius:999px;
+background:rgba(255,255,255,0.45);
+backdrop-filter:blur(12px);
+font-size:13px;
+font-weight:700;
+letter-spacing:2px;
+color:#8a7db3;
+margin-bottom:30px;
+border:1px solid rgba(255,255,255,0.7);
+}
+
+h1{
+font-size:76px;
+line-height:1.02;
+font-weight:800;
+letter-spacing:-3px;
+margin-bottom:35px;
+color:#574d72;
+}
+
+.gradient{
+background:linear-gradient(90deg,#8d7dff,#c48cff,#73d8ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-text{
+font-size:18px;
+color:#6f6786;
+max-width:680px;
+margin-bottom:40px;
+}
+
+.cta-wrap{
+display:flex;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.cta-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 34px;
+border-radius:999px;
+background:
+linear-gradient(135deg,rgba(255,255,255,0.65),rgba(255,255,255,0.22));
+border:1px solid rgba(255,255,255,0.8);
+backdrop-filter:blur(16px);
+font-weight:700;
+color:#655c82;
+box-shadow:
+0 15px 40px rgba(184,192,255,0.18),
+inset 0 1px 0 rgba(255,255,255,0.8);
+transition:0.35s;
+}
+
+.cta-btn:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:
+0 25px 50px rgba(184,192,255,0.25);
+}
+
+.visual-wrap{
+position:relative;
+perspective:1600px;
+}
+
+.visual-panel{
+position:relative;
+transform-style:preserve-3d;
+transform:rotateY(-10deg) rotateX(5deg);
+transition:0.6s;
+}
+
+.visual-panel:hover{
+transform:rotateY(-4deg) rotateX(2deg);
+}
+
+.visual-panel::before{
+content:"";
+position:absolute;
+inset:-20px;
+border-radius:42px;
+background:
+linear-gradient(135deg,
+rgba(255,255,255,0.4),
+rgba(255,255,255,0.08));
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.5);
+transform:translateZ(-30px);
+}
+
+.visual-panel img{
+width:100%;
+border-radius:36px;
+object-fit:contain;
+background:rgba(255,255,255,0.45);
+backdrop-filter:blur(20px);
+padding:12px;
+box-shadow:
+0 40px 90px rgba(171,183,255,0.24);
+}
+
+.orb{
+position:absolute;
+border-radius:50%;
+filter:blur(5px);
+opacity:0.7;
+}
+
+.orb1{
+width:120px;
+height:120px;
+background:#d2c6ff;
+top:-40px;
+right:-20px;
+}
+
+.orb2{
+width:90px;
+height:90px;
+background:#bdeeff;
+bottom:20px;
+left:-20px;
+}
+
+section{
+padding:140px 0;
+position:relative;
+}
+
+.section-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:90px;
+align-items:center;
+}
+
+.text-box{
+position:relative;
+}
+
+.section-mini{
+font-size:13px;
+letter-spacing:3px;
+font-weight:700;
+color:#9c92c9;
+margin-bottom:18px;
+}
+
+.section-title{
+font-size:58px;
+line-height:1.1;
+font-weight:800;
+letter-spacing:-2px;
+margin-bottom:32px;
+color:#584d73;
+}
+
+.section-title span{
+display:block;
+background:linear-gradient(90deg,#8f80ff,#73d8ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.text-box p{
+font-size:17px;
+color:#6e6785;
+margin-bottom:24px;
+}
+
+.feature-list{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+margin-top:40px;
+}
+
+.feature{
+padding:24px;
+border-radius:28px;
+background:rgba(255,255,255,0.3);
+border:1px solid rgba(255,255,255,0.6);
+backdrop-filter:blur(14px);
+box-shadow:
+0 10px 30px rgba(182,190,255,0.12);
+}
+
+.feature h3{
+font-size:18px;
+margin-bottom:10px;
+color:#60557d;
+}
+
+.feature p{
+font-size:14px;
+margin:0;
+line-height:1.8;
+}
+
+.image-frame{
+position:relative;
+perspective:1400px;
+}
+
+.image-frame img{
+width:100%;
+border-radius:38px;
+object-fit:contain;
+padding:12px;
+background:rgba(255,255,255,0.38);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.6);
+transform:rotateY(8deg) rotateX(3deg);
+box-shadow:
+0 40px 90px rgba(171,183,255,0.18);
+}
+
+.quote-card{
+margin-top:40px;
+padding:40px;
+border-radius:36px;
+background:
+linear-gradient(135deg,
+rgba(255,255,255,0.45),
+rgba(255,255,255,0.15));
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.7);
+box-shadow:
+0 20px 50px rgba(177,185,255,0.14);
+}
+
+.quote-card p{
+font-size:16px;
+color:#706888;
+margin-bottom:18px;
+}
+
+.quote-card strong{
+color:#5f547c;
+font-size:18px;
+}
+
+.cta-section{
+text-align:center;
+}
+
+.cta-main{
+position:relative;
+padding:100px 50px;
+border-radius:54px;
+background:
+linear-gradient(135deg,
+rgba(255,255,255,0.45),
+rgba(255,255,255,0.12));
+backdrop-filter:blur(26px);
+border:1px solid rgba(255,255,255,0.6);
+overflow:hidden;
+box-shadow:
+0 40px 100px rgba(180,190,255,0.16);
+}
+
+.cta-main::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+border-radius:50%;
+background:radial-gradient(circle,#ffffff 0%,transparent 70%);
+top:-250px;
+right:-180px;
+opacity:0.55;
+}
+
+.cta-main h2{
+font-size:70px;
+line-height:1.08;
+margin-bottom:30px;
+font-weight:800;
+letter-spacing:-3px;
+color:#584d73;
+position:relative;
+z-index:2;
+}
+
+.cta-main p{
+font-size:18px;
+color:#706888;
+max-width:760px;
+margin:auto auto 40px;
+position:relative;
+z-index:2;
+}
+
+footer{
+padding:80px 0;
+text-align:center;
+font-size:14px;
+color:#81789a;
+}
+
+@media(max-width:980px){
+
+.hero-grid,
+.section-grid{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:52px;
+}
+
+.section-title{
+font-size:42px;
+}
+
+.cta-main h2{
+font-size:44px;
+}
+
+.glass-card{
+padding:42px;
+}
+
+.feature-list{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="fog"></div>
+
+<header class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div class="glass-card">
+
+<div class="label">
+SCALP FRAGRANCE MIST
+</div>
+
+<h1>
+夕方の不安を、<br>
+<span class="gradient">透明感の香り</span>へ。
+</h1>
+
+<p class="hero-text">
+女性のための新感覚スカルプヘアミスト。  
+頭皮臭・汗・湿気によるニオイを、シュッとひと吹きで爽やかな香りへ。  
+韓国コスメのような透明感と艶感を意識した、次世代ヘアフレグランス習慣。
+</p>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener"
+class="cta-btn">
+公式サイトを見る
+</a>
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener"
+class="cta-btn">
+口コミをチェック
+</a>
+
+<a href="page2.html"
+target="_blank"
+class="cta-btn">
+頭皮臭対策の記事を見る
+</a>
+
+</div>
+
+</div>
+
+<div class="visual-wrap">
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<div class="visual-panel">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener">
+
+<img src="image1.jpg.png" alt="ミニョン スカルプヘアミスト">
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section>
+
+<div class="container">
+
+<div class="section-grid">
+
+<div class="text-box">
+
+<div class="section-mini">
+SCALP BEAUTY CARE
+</div>
+
+<h2 class="section-title">
+近づく瞬間まで、<span>髪は香る。</span>
+</h2>
+
+<p>
+女性は、自分の髪の香りには敏感。  
+でも、頭皮のニオイは自分では気づきにくいと言われています。
+</p>
+
+<p>
+満員電車、仕事終わり、湿気の多い日。  
+夕方になると気になり始める“頭皮臭”。
+</p>
+
+<p>
+ミニョン スカルプヘアミストは、そんな女性のために生まれた新感覚の頭皮フレグランスです。
+</p>
+
+<p>
+気になった時にシュッとひと吹き。  
+軽くなじませるだけで、爽やかな香りと清潔感を演出します。
+</p>
+
+<div class="feature-list">
+
+<div class="feature">
+<h3>透明感フレグランス</h3>
+<p>
+ふわっと香る上品なヘアフレグランス。
+</p>
+</div>
+
+<div class="feature">
+<h3>頭皮臭ケア</h3>
+<p>
+汗・湿気・皮脂臭が気になる時に。
+</p>
+</div>
+
+<div class="feature">
+<h3>ミストタイプ</h3>
+<p>
+持ち運びしやすく外出先でも使いやすい。
+</p>
+</div>
+
+<div class="feature">
+<h3>韓国コスメ風</h3>
+<p>
+透明感ある美容デザインを意識。
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="image-frame">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener">
+
+<img src="image2.jpg.png" alt="頭皮フレグランス">
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-grid">
+
+<div class="image-frame">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener">
+
+<img src="image3.jpg.png" alt="韓国コスメ風ヘアミスト">
+
+</a>
+
+</div>
+
+<div class="text-box">
+
+<div class="section-mini">
+MIST BEAUTY
+</div>
+
+<h2 class="section-title">
+香水じゃない。<span>頭皮フレグランス。</span>
+</h2>
+
+<p>
+一般的な香水やヘアコロンでは隠しきれない“頭皮臭”。
+</p>
+
+<p>
+ミニョンは、頭皮そのものへアプローチする新発想のヘアミストです。
+</p>
+
+<p>
+カキタンニンや植物由来成分を配合し、爽やかな香りと頭皮ケアを両立。
+</p>
+
+<p>
+さらに、ヒアルロン酸・コラーゲン・プラセンタなど美容成分も配合されています。
+</p>
+
+<div class="quote-card">
+
+<p>
+「夕方になっても気にならない」  
+「帽子をかぶっても快適」  
+「優しく香る感じが好き」
+</p>
+
+<strong>
+美容好き女性からも注目されています。
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-grid">
+
+<div class="text-box">
+
+<div class="section-mini">
+HAIR PERFUME
+</div>
+
+<h2 class="section-title">
+清潔感は、<span>髪から始まる。</span>
+</h2>
+
+<p>
+香りは、その人の印象を左右する大切な要素。
+</p>
+
+<p>
+特に髪や頭皮の香りは、近距離で意外と気になるポイントです。
+</p>
+
+<p>
+ミニョン スカルプヘアミストは、ヘアフレグランス感覚で使えるため、毎日の美容ルーティンにも取り入れやすいアイテム。
+</p>
+
+<p>
+朝のスタイリング後や、仕事終わり、デート前など様々なシーンで活躍します。
+</p>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener"
+class="cta-btn">
+香りケアを始める
+</a>
+
+</div>
+
+</div>
+
+<div class="image-frame">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener">
+
+<img src="image4.jpg.png" alt="艶髪ミスト">
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta-section">
+
+<div class="container">
+
+<div class="cta-main">
+
+<h2>
+髪から、<br>
+<span class="gradient">もっと透明感を。</span>
+</h2>
+
+<p>
+夕方の頭皮臭対策に。  
+韓国コスメのような透明感と、ふわっと香る上品なヘアフレグランス体験を。
+</p>
+
+<div class="cta-wrap" style="justify-content:center;">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener"
+class="cta-btn">
+公式サイトを見る
+</a>
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener"
+class="cta-btn">
+人気の理由を見る
+</a>
+
+<a href="page2.html"
+target="_blank"
+class="cta-btn">
+頭皮臭対策の記事へ
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-grid">
+
+<div class="image-frame">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener">
+
+<img src="image5.jpg.png" alt="女性向け頭皮ケア">
+
+</a>
+
+</div>
+
+<div class="text-box">
+
+<div class="section-mini">
+SCALP CARE BEAUTY
+</div>
+
+<h2 class="section-title">
+香りも、艶も、<span>自信になる。</span>
+</h2>
+
+<p>
+頭皮ケアは、これからの新しい美容習慣。
+</p>
+
+<p>
+スキンケアやヘアケアだけではなく、“香りの清潔感”まで意識する女性が増えています。
+</p>
+
+<p>
+ミニョン スカルプヘアミストは、毎日をもっと心地よく過ごしたい女性のためのヘアフレグランスです。
+</p>
+
+<p>
+気になる瞬間にシュッとひと吹き。  
+新感覚の頭皮フレグランス体験を、ぜひチェックしてみてください。
+</p>
+
+<div class="cta-wrap">
+
+<a href="アフィリエイトリンク"
+target="_blank"
+rel="nofollow noopener"
+class="cta-btn">
+公式ページを見る
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+© Mignon Scalp Hair Mist Beauty Collection
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
